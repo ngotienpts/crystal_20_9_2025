@@ -415,6 +415,26 @@ document.addEventListener("DOMContentLoaded", function () {
             })
 
         },
+        // show filter hotel primary
+        handleShowFilterHotelPrimary: function() {
+            const uFilterHotelPrimaryContainer = document.querySelector('.js__uFilterHotelPrimaryContainer');
+            if(uFilterHotelPrimaryContainer){
+
+                var closeFilterHotelPrimary =
+                    uFilterHotelPrimaryContainer.querySelector(".js__uFilterHotelPrimaryClose");
+                var showFilterHotelPrimary =
+                    uFilterHotelPrimaryContainer.querySelector(".js__uFilterHotelPrimaryMore");
+
+                showFilterHotelPrimary.onclick = function () {
+                    uFilterHotelPrimaryContainer.classList.add("active");
+                    bodyEle.classList.add("overflow-hidden");
+                };
+                closeFilterHotelPrimary.onclick = function () {
+                    uFilterHotelPrimaryContainer.classList.remove("active");
+                    bodyEle.classList.remove("overflow-hidden");
+                } 
+            }
+        },
         // slider one
         sliderOneItems: function () {
             oneSlides.forEach((item) => {
@@ -1051,6 +1071,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.rangeFilterHotel();
             // xử lý sự kiện tăng giảm số lượng sản phẩm
             this.handleIncremental();
+            // show filter hotel primary
+            this.handleShowFilterHotelPrimary();
             // slider one
             this.sliderOneItems();
             // slider one secondary
