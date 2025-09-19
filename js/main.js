@@ -343,6 +343,78 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         },
+        // range filter hotel
+        rangeFilterHotel: function() {
+            const uRangeContainer = document.querySelector('.js__uRangeContainer');
+            if(uRangeContainer) {
+                const rangeInput = uRangeContainer.querySelector('.js__uRangeInput');
+                const valueDisplay = uRangeContainer.querySelector('.js__uRangeMax');
+    
+                function updateSlider() {
+                    const value = rangeInput.value;
+                    const min = rangeInput.min;
+                    const max = rangeInput.max;
+    
+                    const percentage = ((value - min) / (max - min)) * 100;
+    
+                    rangeInput.style.background = `linear-gradient(to right, #145062 0%, #145062 ${percentage}%, #f5f5f5 ${percentage}%, #f5f5f5 100%)`;
+    
+                    const formattedValue = new Intl.NumberFormat('vi-VN').format(value);
+                    valueDisplay.textContent = `${formattedValue}Đ`;
+                }
+    
+                updateSlider();
+    
+                rangeInput.addEventListener('input', updateSlider);
+            }
+        },
+        // xử lý sự kiện tăng giảm số lượng sản phẩm
+        handleIncremental: function() {
+            const incrementals = document.querySelectorAll('.js__incremental')
+            if (incrementals.length === 0) return;
+
+            incrementals.forEach((incremental)=>{
+                let deincrement = incremental.querySelector(".js__deincrement");
+                let increment = incremental.querySelector(".js__increment");
+                let number = incremental.querySelector(".js__numberValue");
+
+                
+                let step = 1;
+                let max = 20;
+                let min = 0;
+                let valueInput = 0;
+                
+                function updateValue(newValue) {
+                    valueInput = newValue;
+                    console.log("Current value:", valueInput);
+                }
+                
+                number.oninput = function () {
+                    number.value = number.value > max ? max : number.value < min ? min : number.value;
+                    updateValue(number.value);
+                };
+                
+                increment.addEventListener("click", () => {
+                    if (parseInt(number.value) + step >= max) {
+                        number.value = max;
+                    } else {
+                        number.value = parseInt(number.value) + step;
+                    }
+                    updateValue(number.value);
+                });
+                
+                deincrement.addEventListener("click", () => {
+                    if (parseInt(number.value) - step <= min) {
+                        number.value = min;
+                    } else {
+                        number.value = parseInt(number.value) - step;
+                    }
+                    updateValue(number.value);
+                });
+
+            })
+
+        },
         // slider one
         sliderOneItems: function () {
             oneSlides.forEach((item) => {
@@ -975,6 +1047,10 @@ document.addEventListener("DOMContentLoaded", function () {
             this.stickyHandbook();
             // fancybox
             this.fancybox();
+            // range filter hotel
+            this.rangeFilterHotel();
+            // xử lý sự kiện tăng giảm số lượng sản phẩm
+            this.handleIncremental();
             // slider one
             this.sliderOneItems();
             // slider one secondary

@@ -540,9 +540,340 @@
                     <!-- left -->
                     <div class="u-hotel-primary__left u-block-secondary__left">
                         <!-- filter -->
-                        <div class="u-hotel-primary__left-filter">
+                        <div class="u-hotel-primary__left-filter p-15">
                             <!-- top -->
+                            <div class="u-filter-top d-2xl-flex items-center justify-between">
+                                <div class="u-filter-top__left d-2xl-flex items-center flex-1 pr-10">
+                                    <div class="left-icon flex-0">
+                                        <img src="./images/icon/filter-gray.svg" alt="">
+                                    </div>
+                                    <h1 class="left-text fs-17 fw-600 uppercase flex-1 pl-10">Chọn lọc theo</h1>
+                                </div>
+                                <div class="u-filter-top__close d-2xl-flex items-center justify-center flex-0">
+                                    <img src="./images/icon/close-cyan.svg" alt="">
+                                </div>
+                            </div>
                             <!-- top -->
+                            <!-- list -->
+                            <div class="u-fiter-list">
+                                <!-- filter item -->
+                                <div class="u-filter-item u-filter-item__one">
+                                    <!-- title -->
+                                    <div class="u-filter-item__title">
+                                        <h2 class="fs-14 fw-600 uppercase">Ngân sách của bạn (mỗi đêm)</h2>
+                                    </div>
+                                    <!-- end title -->
+                                    <!-- content -->
+                                    <div class="u-filter-item__content mt-8">
+                                        <div class="u-range-container js__uRangeContainer">
+                                            <input type="range" class="u-range-input js__uRangeInput" min="0" max="6000000" value="6000000">
+                                            <div class="u-range-labels d-2xl-flex items-center gap-8 justify-between w-full">
+                                                <span id="u-min-label" class="fs-14 fw-300 js__uRangeMin">0Đ</span>
+                                                <span id="u-max-label" class="fs-14 fw-300 js__uRangeMax">6.000.000Đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end filter item -->
+                                <!-- filter item -->
+                                <div class="u-filter-item u-filter-item__two">
+                                    <!-- title -->
+                                    <div class="u-filter-item__title">
+                                        <h2 class="fs-14 fw-600 uppercase">Các bộ lọc phổ biến</h2>
+                                    </div>
+                                    <!-- end title -->
+                                    <!-- content -->
+                                    <div class="u-filter-item__content mt-10">
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-1">
+                                                <input type="checkbox" id="el-1-1" name="popular" checked="">
+                                                <label for="el-1-1">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-2">
+                                                <input type="checkbox" id="el-1-2" name="popular">
+                                                <label for="el-1-2">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-3">
+                                                <input type="checkbox" id="el-1-3" name="popular">
+                                                <label for="el-1-3">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-4">
+                                                <input type="checkbox" id="el-1-4" name="popular">
+                                                <label for="el-1-4">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-5">
+                                                <input type="checkbox" id="el-1-5" name="popular">
+                                                <label for="el-1-5">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-6">
+                                                <input type="checkbox" id="el-1-6" name="popular">
+                                                <label for="el-1-6">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-7">
+                                                <input type="checkbox" id="el-1-7" name="popular">
+                                                <label for="el-1-7">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-8">
+                                                <input type="checkbox" id="el-1-8" name="popular">
+                                                <label for="el-1-8">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-9">
+                                                <input type="checkbox" id="el-1-9" name="popular">
+                                                <label for="el-1-9">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-1-10">
+                                                <input type="checkbox" id="el-1-10" name="popular">
+                                                <label for="el-1-10">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">4 sao</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                       
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end filter item -->
+                                <!-- filter item -->
+                                <div class="u-filter-item u-filter-item__two">
+                                    <!-- title -->
+                                    <div class="u-filter-item__title">
+                                        <h2 class="fs-14 fw-600 uppercase">Loại chỗ ở</h2>
+                                    </div>
+                                    <!-- end title -->
+                                    <!-- content -->
+                                    <div class="u-filter-item__content mt-10">
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-2-1">
+                                                <input type="checkbox" id="el-2-1" name="type-home" checked="">
+                                                <label for="el-2-1">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">Khách sạn</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-2-2">
+                                                <input type="checkbox" id="el-2-2" name="type-home">
+                                                <label for="el-2-2">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">Khách sạn</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-2-3">
+                                                <input type="checkbox" id="el-2-3" name="type-home">
+                                                <label for="el-2-3">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">Khách sạn</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-2-4">
+                                                <input type="checkbox" id="el-2-4" name="type-home">
+                                                <label for="el-2-4">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">Khách sạn</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-2-5">
+                                                <input type="checkbox" id="el-2-5" name="type-home">
+                                                <label for="el-2-5">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">Khách sạn</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-2-6">
+                                                <input type="checkbox" id="el-2-6" name="type-home">
+                                                <label for="el-2-6">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">Khách sạn</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                        <!-- option -->
+                                        <div class="u-filter-box__option d-2xl-flex items-center justify-between gap-8 fs-14 fw-300">
+                                            <div class="u-radio-box u-custom-checkbox flex-1" rel="el-2-7">
+                                                <input type="checkbox" id="el-2-7" name="type-home">
+                                                <label for="el-2-7">
+                                                    <div class="u-check">
+                                                        <img src="./images/icon/check-w.svg" alt="">
+                                                    </div>
+                                                    <span class="u-check-txt-1">Khách sạn</span>
+                                                </label>
+                                            </div>
+                                            <div class="u-check-txt-2 flex-0">24</div>
+                                        </div>
+                                        <!-- end option -->
+                                       
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end filter item -->
+                                <!-- filter item -->
+                                <div class="u-filter-item u-filter-item__three">
+                                    <!-- title -->
+                                    <div class="u-filter-item__title">
+                                        <h2 class="fs-14 fw-600 uppercase">Phòng ngủ và phòng tắm</h2>
+                                    </div>
+                                    <!-- end title -->
+                                    <!-- content -->
+                                    <div class="u-filter-item__content mt-10">
+                                        <div class="d-2xl-flex items-center justify-between gap-8 mb-10">
+                                            <div class="flex-1 fw-14 fw-300">Phòng ngủ</div>
+                                            <div class="quantity-wrap js__incremental flex-0">
+                                                <button class="increment js__increment">+</button>
+                                                <input type="number" value="0" class="number js__numberValue" min="0" max="100">
+                                                <button class="deincrement js__deincrement">-</button>
+                                            </div>
+                                        </div>
+                                        <div class="d-2xl-flex items-center justify-between gap-8">
+                                            <div class="flex-1 fw-14 fw-300">Phòng tắm</div>
+                                            <div class="quantity-wrap js__incremental flex-0">
+                                                <button class="increment js__increment">+</button>
+                                                <input type="number" value="0" class="number js__numberValue" min="0" max="100">
+                                                <button class="deincrement js__deincrement">-</button>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <!-- end content -->
+                                </div>
+                                <!-- end filter item -->
+                            </div>
+                            <!-- end list -->
                         </div>
                         <!-- end filter -->
                     </div>
