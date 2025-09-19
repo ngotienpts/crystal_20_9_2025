@@ -349,6 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 var slider = item.querySelector(".js__swiperOnes");
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
+                var pagi = item.querySelector(".swiper-pagination");
                 new Swiper(slider, {
                     slidesPerView: 1,
                     spaceBetween: 18,
@@ -356,6 +357,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     navigation: {
                         nextEl: next || null,
                         prevEl: prev || null,
+                    },
+                    pagination: {
+                        el: pagi || null,
                     },
                 });
             });
