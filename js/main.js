@@ -484,6 +484,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     pagination: {
                         el: pagi || null,
                     },
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
                 });
             });
         },
