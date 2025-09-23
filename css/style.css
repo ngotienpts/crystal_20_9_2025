@@ -1136,6 +1136,10 @@ img {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.py-60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 .pt-60 {
     padding-top: 60px;
 }
@@ -1502,6 +1506,9 @@ img {
 }
 .border-t-cyan-035 {
     border-top: 1px solid rgba(20, 80, 98, 0.35)
+}
+.border-b-cyan-25 {
+    border-bottom: 1px solid rgba(20, 80, 98, 0.25)
 }
 .over-hidden {
     overflow: hidden;
@@ -5521,7 +5528,7 @@ input[type=number] {
     overflow: hidden;
     
 }
-.u-detail-hotel-secondary__more-info-booking {
+.u-detail-hotel-secondary__more-info-booking-icon {
     display: none;
 }
 .left-top__utilities-vote .list {
@@ -5689,5 +5696,67 @@ input[type=number] {
     padding: 15px;
     border-radius: 999px;
     cursor: pointer;
+}
+.u-detail-hotel-secondary__right-top {
+    display: none;
+}
+.u-detail-hotel-secondary__right .u-detail-hotel-secondary__right-top {
+    display: block;
+}
+.date-members-inner .u-date-range,
+.date-members-inner .number-of-members {
+    border: 1px solid #888;
+    border-radius: 999px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.date-members-inner .number-of-members {
+    padding-right: 10px;
+}
+.date-members-inner .u-date-range .u-date-range__left{
+    display: flex;
+    align-items: center;
+}
+.date-members-inner .u-date-range .u-date-range__icon,
+.date-members-inner .number-of-members .number-of-members__icon{
+   flex-shrink: 0;
+}
+.date-members-inner .u-date-range .u-date-range__input,
+.date-members-inner .number-of-members .number-of-members__select{
+   flex: 1;
+   font-size: 16px;
+   padding-left: 10px;
+   font-weight: 300;
+}
+.date-members-inner .u-date-range .u-date-range__count{
+   font-size: 16px;
+   font-weight: 300;
+}
+.daterangepicker .drp-buttons .cancelBtn{
+   background: #999;
+}
+.daterangepicker .drp-buttons .applyBtn{
+   background: #145062;
+}
+.date-members-inner .number-of-members .number-of-members__select {
+    appearance: none;  
+    -webkit-appearance: none;
+    -moz-appearance: none;   
+    
+    background: url("../images/icon/arrow-down-gray.svg") 
+                no-repeat right 10px center;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.date-members-inner .date-members-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #145062;
+    padding: 15px 20px;
+    min-width: 185px;
+    border-radius: 999px;
 }
 /*--------------------------------------- end update 20-9-2025 -----------------------------------------*/

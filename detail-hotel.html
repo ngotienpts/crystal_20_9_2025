@@ -89,6 +89,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./lib/date-range-picker/daterangepicker.css">
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/responsive.css" />
         <script src="./lib/jquery/jquery.js"></script>
@@ -598,14 +599,7 @@
 
             <!-- detail hotel secondary -->
             <section class="u-detail-hotel-secondary relative z-20 px-15">
-                <!-- more mobile -->
-                <div class="u-detail-hotel-secondary__more-info-booking fs-18 fw-500 text-white">
-                    <span>Thông tin đặt phòng</span>
-                    <div class="ml-8">
-                        <img src="./images/icon/arrow-down-w.svg" alt="">
-                    </div>
-                </div>
-                <!-- end more mobile -->
+                
                 <div class="u-detail-hotel-secondary__container u-block-tertiary d-2xl-flex w-1410 relative z-20 pt-20 pb-80 py-md-30">
                     <!-- left -->
                     <div class="u-detail-hotel-secondary__left u-block-tertiary__left">
@@ -622,6 +616,36 @@
                                 <p class="left-top__location-text fs-16 text-gray-33 flex-1 d-2xl-block fw-300 pl-8">304 Hai Tháng Tư, Ngọc Hiệp, Nha Trang, Khánh Hoà</p>
                             </div>
                             <!-- end location -->
+                            <!-- rating mobile -->
+                            <div class="u-detail-hotel-secondary__right-top pb-15 border-b-cyan-25">
+                                <!-- rating -->
+                                <div class="vote-heading__info d-2xl-flex items-center justify-between mt-8">
+                                    <ul class="vote-heading__stars d-2xl-flex items-center">
+                                        <li class="star-item"><img src="./images/icon/Star_2.svg" alt=""></li>
+                                        <li class="star-item"><img src="./images/icon/Star_2.svg" alt=""></li>
+                                        <li class="star-item"><img src="./images/icon/Star_2.svg" alt=""></li>
+                                        <li class="star-item"><img src="./images/icon/Star_2.svg" alt=""></li>
+                                        <li class="star-item"><img src="./images/icon/Star_2_1.svg" alt=""></li>
+                                    </ul>
+                                    <div class="vote-heading__total-rating d-2xl-flex items-center ml-20 fs-14 fw-300">
+                                        <span class="txt-1 d-2xl-inline pr-4">25</span>
+                                        <span class="txt-2 d-2xl-inline">Đánh giá</span>
+                                    </div>
+                                </div>
+                                <!-- end rating -->
+                                <div class="u-detail-hotel-secondary__right-price mt-30">
+                                    <div class="article-price d-2xl-flex items-center flex-wrap gap-10">
+                                        <div class="price fw-400 text-red-ef fs-20">1.500.000 VNĐ</div>
+                                        <div class="d-2xl-flex items-center justify-end ml-12">
+                                            <div class="price-old fw-300 text-gray-82 fs-14 line-through">1.650.000 VNĐ</div>
+                                            <div class="article-light-count bg-gree-145 ml-12">
+                                                <span class="article-light-count__badge fs-12 text-white fw-300">2 đêm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end rating mobile -->
                             <!-- vote and utilities -->
                             <div class="left-top__utilities-vote d-2xl-grid col-2 gap-24 d-lg-block mt-20 mb-20">
                                 <!-- vote -->
@@ -821,9 +845,48 @@
                         <!-- bot -->
                         <div class="left-bot">
                             <!-- title -->
-                            <h2 class="fs-36 fw-500">Đăng ký phòng</h2>
+                            <h2 class="left-bot__title fs-36 fw-500">Đăng ký phòng</h2>
                             <!-- end title -->
-
+                            <!-- date and members -->
+                            <div class="date-members-container mt-30 js__dateMembersContainer">
+                                <form action="">
+                                    <div class="date-members-inner d-2xl-flex items-center gap-10 d-lg-block">
+                                        <!-- date range picker -->
+                                        <div class="u-date-range flex-1">
+                                            <div class="u-date-range__left">
+                                                <div class="u-date-range__icon">
+                                                    <img src="./images/icon/calender-gray.svg" alt="">
+                                                </div>
+                                                <input type="text" name="daterange" class="u-date-range__input" value="23/09/2025-25/09/2025" />
+                                                <span class="u-date-range__count js__dateRangeCount">,2 ngày</span>
+                                            </div>
+                                            <div class="u-date-range__right">
+                                                <img src="./images/icon/arrow-down-gray.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- end date range picker -->
+        
+                                        <!-- number of members -->
+                                        <div class="number-of-members flex-1">
+                                            <div class="number-of-members__icon">
+                                                <img src="./images/icon/contacts-gray.svg" alt="">
+                                            </div>
+                                            <select name="select-members" id="select-members" class="number-of-members__select">
+                                                <option value="0">2 người lớn, 0 trẻ em, 1 phòng</option>
+                                                <option value="1">2 người lớn, 1 trẻ em, 1 phòng</option>
+                                                <option value="2">2 người lớn, 2 trẻ em, 2 phòng</option>
+                                                <option value="3">5 người lớn, 0 trẻ em, 3 phòng</option>
+                                            </select>
+                                        </div>
+                                        <!-- number of members -->
+        
+                                        <!-- search -->
+                                        <button class="btn date-members-search">Tìm Phòng</button>
+                                        <!-- end search -->
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- end date and members -->
                             <!-- select options -->
                             <div class="u-select-options"></div>
                             <!-- end select options -->
@@ -832,7 +895,7 @@
                                 <!-- item -->
                                 <div class="u-item-room-executive mb-24">
                                     <!-- title -->
-                                    <h3 class="u-item-room-executive__title fs-20 fw-500 text-gray-33">Phòng EXECUTIVE SUITE</h3>
+                                    <h3 class="u-item-room-executive__title fs-20 fw-500 text-gray-33 d-md-none">Phòng EXECUTIVE SUITE</h3>
                                     <!-- end title -->
                                     <!-- content -->
                                     <div class="u-item-room-executive__content mt-20 d-2xl-flex d-lg-block">
@@ -849,6 +912,11 @@
                                                 <!-- end img -->
                                                 <!-- content -->
                                                 <div class="article-content">
+                                                    <!-- title mb-->
+                                                    <h3 class="article-title fs-16 text-gray-33 fw-500 uppercase d-2xl-none d-md-block">
+                                                        <a href="#">Phòng EXECUTIVE SUITE</a>
+                                                    </h3>
+                                                    <!-- end title mb-->
                                                     <!-- utilities -->
                                                     <div class="article-utilities mt-15 d-2xl-flex items-center justify-center flex-wrap gap-20">
                                                         <!-- item -->
@@ -1003,7 +1071,7 @@
                                 <!-- item -->
                                 <div class="u-item-room-executive mb-24">
                                     <!-- title -->
-                                    <h3 class="u-item-room-executive__title fs-20 fw-500 text-gray-33">Phòng EXECUTIVE SUITE</h3>
+                                    <h3 class="u-item-room-executive__title fs-20 fw-500 text-gray-33 d-md-none">Phòng EXECUTIVE SUITE</h3>
                                     <!-- end title -->
                                     <!-- content -->
                                     <div class="u-item-room-executive__content mt-20 d-2xl-flex d-lg-block">
@@ -1020,6 +1088,11 @@
                                                 <!-- end img -->
                                                 <!-- content -->
                                                 <div class="article-content">
+                                                    <!-- title mb-->
+                                                    <h3 class="article-title fs-16 text-gray-33 fw-500 uppercase d-2xl-none d-md-block">
+                                                        <a href="#">Phòng EXECUTIVE SUITE</a>
+                                                    </h3>
+                                                    <!-- end title mb-->
                                                     <!-- utilities -->
                                                     <div class="article-utilities mt-15 d-2xl-flex items-center justify-center flex-wrap gap-20">
                                                         <!-- item -->
@@ -1174,7 +1247,7 @@
                                 <!-- item -->
                                 <div class="u-item-room-executive mb-24">
                                     <!-- title -->
-                                    <h3 class="u-item-room-executive__title fs-20 fw-500 text-gray-33">Phòng EXECUTIVE SUITE</h3>
+                                    <h3 class="u-item-room-executive__title fs-20 fw-500 text-gray-33 d-md-none">Phòng EXECUTIVE SUITE</h3>
                                     <!-- end title -->
                                     <!-- content -->
                                     <div class="u-item-room-executive__content mt-20 d-2xl-flex d-lg-block">
@@ -1191,6 +1264,11 @@
                                                 <!-- end img -->
                                                 <!-- content -->
                                                 <div class="article-content">
+                                                    <!-- title mb-->
+                                                    <h3 class="article-title fs-16 text-gray-33 fw-500 uppercase d-2xl-none d-md-block">
+                                                        <a href="#">Phòng EXECUTIVE SUITE</a>
+                                                    </h3>
+                                                    <!-- end title mb-->
                                                     <!-- utilities -->
                                                     <div class="article-utilities mt-15 d-2xl-flex items-center justify-center flex-wrap gap-20">
                                                         <!-- item -->
@@ -1342,7 +1420,6 @@
                                     <!-- end content -->
                                 </div>
                                 <!-- end item -->
-                                
                                 
                             </div>
                             <!-- end list room -->
@@ -1393,8 +1470,17 @@
                         <!-- end top -->
 
                         <!-- booking -->
-                        <div class="u-detail-hotel-secondary__booking mt-24">
-                            <h3 class="u-detail-hotel-secondary__booking-title fs-24 fw-500 d-md-none">Thông tin đặt phòng</h3>
+                        <div class="u-detail-hotel-secondary__booking mt-24 js__addActiveContainer">
+                            
+                            <!-- title -->
+                            <div class="u-detail-hotel-secondary__more-info-booking js__toggleActive">
+                                <h3 class="u-detail-hotel-secondary__booking-title fs-24 fw-500">Thông tin đặt phòng</h3>
+                                <div class="u-detail-hotel-secondary__more-info-booking-icon ml-8">
+                                    <img src="./images/icon/arrow-down-w.svg" alt="">
+                                </div>
+                            </div>
+                            <!-- end title -->
+
                             <!-- content -->
                             <div class="u-detail-hotel-secondary__booking-content p-20 border-20 bg-green-145 mt-10">
                                 <!-- item -->
@@ -1500,8 +1586,8 @@
                                     </div>
                                     <!-- end room rates -->
 
-                                    <div class="u-detail-hotel-secondary__booking-btn d-2xl-flex items-center justify-center bg-white mt-20">
-                                        <span class="fs-18 fw-500 text-green-145 uppercase">Đặt phòng !</span>
+                                    <div class="u-detail-hotel-secondary__booking-btn d-2xl-flex items-center justify-center bg-white mt-20 fs-18 ">
+                                        <span class="fw-500 text-green-145 uppercase">Đặt phòng !</span>
                                     </div>
                                 </div>
                                 <!-- end item -->
@@ -1757,6 +1843,8 @@
         <script src="./lib/swiper/swiper-bundle.min.js"></script>
         <script src="./js/ResizeSensor.js"></script>
         <script src="./js/theia-sticky-sidebar.js"></script>
+        <script src="./lib/date-range-picker/moment.min.js"></script>
+        <script src="./lib/date-range-picker/daterangepicker.min.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>

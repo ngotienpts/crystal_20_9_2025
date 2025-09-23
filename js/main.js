@@ -435,6 +435,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 } 
             }
         },
+        // add active element
+        handleAddActiveElement: function() {
+            const addActiveContainer = document.querySelector('.js__addActiveContainer');
+            if(addActiveContainer){
+
+                var toggleActive =
+                    addActiveContainer.querySelector(".js__toggleActive");
+              
+
+                
+                toggleActive.onclick = function () {
+                    addActiveContainer.classList.toggle("active");
+                    bodyEle.classList.toggle("overflow-hidden");
+                } 
+            }
+        },
+        // date range picker
+        handleDateRangePicker: function() {
+            let $input = $('.js__dateMembersContainer input[name="daterange"]');
+            if ($input.length) {
+                $input.daterangepicker({
+                    locale: {
+                        format: 'DD/MM/YYYY'
+                    }
+                }, function(start, end, label) {
+                    let soNgay = end.diff(start, 'days');
+                    document.querySelector('.js__dateMembersContainer .js__dateRangeCount').textContent = ', ' + soNgay + ' ngày';
+                });
+            }
+           
+        },
         // slider one
         sliderOneItems: function () {
             oneSlides.forEach((item) => {
@@ -1073,6 +1104,10 @@ document.addEventListener("DOMContentLoaded", function () {
             this.handleIncremental();
             // show filter hotel primary
             this.handleShowFilterHotelPrimary();
+            // add active element
+            this.handleAddActiveElement();
+            // date range picker
+            this.handleDateRangePicker()
             // slider one
             this.sliderOneItems();
             // slider one secondary
