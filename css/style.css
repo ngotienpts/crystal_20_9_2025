@@ -1528,6 +1528,14 @@ img {
 .scale-107:hover {
     transform: scale(1.07,1.07);
 }
+.swiper {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.swiper.swiper-initialized {
+    opacity: 1;
+}
 .header {
     position: relative;
     background-color: #145062;
@@ -6004,4 +6012,5 @@ input[type=number] {
     background-color: #145062;
     color: #fff;
 }
+
 /*--------------------------------------- end update 20-9-2025 -----------------------------------------*/

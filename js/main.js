@@ -875,6 +875,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             spaceBetween: 30,
                         },
                     },
+                    // on: {
+                    //     init: function () {
+                    //         this.el.classList.add('swiper-initialized');
+                    //     }
+                    // }
                 });
                 var large = new Swiper(sliderLarge, {
                     spaceBetween: 10,
@@ -887,6 +892,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     thumbs: {
                         swiper: small,
                     },
+                    // on: {
+                    //     init: function () {
+                    //         this.el.classList.add('swiper-initialized');
+                    //     }
+                    // }
                 });
 
                 // small.controller.control = large;
