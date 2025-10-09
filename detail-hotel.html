@@ -90,6 +90,7 @@
         />
         <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./lib/date-range-picker/daterangepicker.css">
+        <link rel="stylesheet" href="./lib/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/responsive.css" />
         <script src="./lib/jquery/jquery.js"></script>
@@ -546,7 +547,9 @@
                     <!-- pc -->
                     <div class="u-detail-hotel-primary__gird d-2xl-grid d-md-none">
                         <div class="u-detail-hotel-primary__img ratio-21x9 border-10">
-                            <img src="./images/3.jpg" alt="">
+                            <a data-fancybox="gallery" href="./images/3.jpg" data-caption="">
+                                <img src="./images/3.jpg" alt="">
+                            </a>
                         </div>
                         <div class="u-detail-hotel-primary__img ratio-21x9 border-10">
                             <img src="./images/2.jpg" alt="">
@@ -1845,6 +1848,7 @@
         <script src="./js/theia-sticky-sidebar.js"></script>
         <script src="./lib/date-range-picker/moment.min.js"></script>
         <script src="./lib/date-range-picker/daterangepicker.min.js"></script>
+        <script src="./lib/fancybox/jquery.fancybox.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>
